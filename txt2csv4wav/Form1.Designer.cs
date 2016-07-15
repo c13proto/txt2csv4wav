@@ -30,13 +30,14 @@
         {
             this.button保存 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButton8bit = new System.Windows.Forms.RadioButton();
             this.radioButton16bit = new System.Windows.Forms.RadioButton();
+            this.radioButton8bit = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.textBoxloop = new System.Windows.Forms.TextBox();
             this.textbox = new System.Windows.Forms.Label();
             this.labeldebug = new System.Windows.Forms.Label();
             this.button変換開始 = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,16 +60,6 @@
             this.panel1.Size = new System.Drawing.Size(75, 49);
             this.panel1.TabIndex = 1;
             // 
-            // radioButton8bit
-            // 
-            this.radioButton8bit.AutoSize = true;
-            this.radioButton8bit.Location = new System.Drawing.Point(4, 4);
-            this.radioButton8bit.Name = "radioButton8bit";
-            this.radioButton8bit.Size = new System.Drawing.Size(42, 16);
-            this.radioButton8bit.TabIndex = 0;
-            this.radioButton8bit.Text = "8bit";
-            this.radioButton8bit.UseVisualStyleBackColor = true;
-            // 
             // radioButton16bit
             // 
             this.radioButton16bit.AutoSize = true;
@@ -80,6 +71,16 @@
             this.radioButton16bit.TabStop = true;
             this.radioButton16bit.Text = "16bit";
             this.radioButton16bit.UseVisualStyleBackColor = true;
+            // 
+            // radioButton8bit
+            // 
+            this.radioButton8bit.AutoSize = true;
+            this.radioButton8bit.Location = new System.Drawing.Point(4, 4);
+            this.radioButton8bit.Name = "radioButton8bit";
+            this.radioButton8bit.Size = new System.Drawing.Size(42, 16);
+            this.radioButton8bit.TabIndex = 0;
+            this.radioButton8bit.Text = "8bit";
+            this.radioButton8bit.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -127,11 +128,19 @@
             this.button変換開始.UseVisualStyleBackColor = true;
             this.button変換開始.Click += new System.EventHandler(this.Click変換開始);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(12, 181);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(75, 23);
+            this.progressBar1.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(205, 237);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button変換開始);
             this.Controls.Add(this.labeldebug);
             this.Controls.Add(this.textbox);
@@ -159,6 +168,7 @@
         private System.Windows.Forms.Label textbox;
         private System.Windows.Forms.Label labeldebug;
         private System.Windows.Forms.Button button変換開始;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 

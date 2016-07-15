@@ -7,3 +7,12 @@ c:\users\idry7lash629\documents\visual studio 2015\Projects\txt2csv4wav\txt2csv4
 c:\users\idry7lash629\documents\visual studio 2015\Projects\txt2csv4wav\txt2csv4wav\obj\Debug\txt2csv4wav.csproj.GenerateResource.Cache
 c:\users\idry7lash629\documents\visual studio 2015\Projects\txt2csv4wav\txt2csv4wav\obj\Debug\txt2csv4wav.exe
 c:\users\idry7lash629\documents\visual studio 2015\Projects\txt2csv4wav\txt2csv4wav\obj\Debug\txt2csv4wav.pdb
+C:\Users\idry7lash629\Documents\GitHub\txt2csv4wav\txt2csv4wav\bin\Debug\txt2csv4wav.exe.config
+C:\Users\idry7lash629\Documents\GitHub\txt2csv4wav\txt2csv4wav\obj\Debug\txt2csv4wav.exe
+C:\Users\idry7lash629\Documents\GitHub\txt2csv4wav\txt2csv4wav\obj\Debug\txt2csv4wav.pdb
+C:\Users\idry7lash629\Documents\GitHub\txt2csv4wav\txt2csv4wav\bin\Debug\txt2csv4wav.exe
+C:\Users\idry7lash629\Documents\GitHub\txt2csv4wav\txt2csv4wav\bin\Debug\txt2csv4wav.pdb
+C:\Users\idry7lash629\Documents\GitHub\txt2csv4wav\txt2csv4wav\obj\Debug\txt2csv4wav.csprojResolveAssemblyReference.cache
+C:\Users\idry7lash629\Documents\GitHub\txt2csv4wav\txt2csv4wav\obj\Debug\txt2csv4wav.Form1.resources
+C:\Users\idry7lash629\Documents\GitHub\txt2csv4wav\txt2csv4wav\obj\Debug\txt2csv4wav.Properties.Resources.resources
+C:\Users\idry7lash629\Documents\GitHub\txt2csv4wav\txt2csv4wav\obj\Debug\txt2csv4wav.csproj.GenerateResource.Cache

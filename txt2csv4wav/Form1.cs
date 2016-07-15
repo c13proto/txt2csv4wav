@@ -121,7 +121,66 @@ namespace txt2csv4wav
 
         private void Click保存(object sender, EventArgs e)
         {
+            if (数値DATA8bit.Count > 10)
+            {
+                //System.IO.Directory.CreateDirectory(@"result");//resultフォルダの作成
+                SaveFileDialog sfd = new SaveFileDialog();//SaveFileDialogクラスのインスタンスを作成
+                                                          //sfd.FileName = textBox_Gaus.Text + "_" + textBox_Bright.Text + "_" + textBox_Cont.Text;//はじめのファイル名を指定する
+                                                          //sfd.InitialDirectory = @"result\";//はじめに表示されるフォルダを指定する
+                sfd.Filter = "csvファイル|*.csv;*.txt|全てのファイル|*.*";//[ファイルの種類]に表示される選択肢を指定する
+                sfd.FilterIndex = 1;//[ファイルの種類]ではじめに「画像ファイル」が選択されているようにする
+                sfd.Title = "保存先のファイルを選択してください";//タイトルを設定する
+                sfd.RestoreDirectory = true;//ダイアログボックスを閉じる前に現在のディレクトリを復元するようにする
+                sfd.OverwritePrompt = true;//既に存在するファイル名を指定したとき警告する．デフォルトでTrueなので指定する必要はない
+                sfd.CheckPathExists = true;//存在しないパスが指定されたとき警告を表示する．デフォルトでTrueなので指定する必要はない
 
+                //ダイアログを表示する
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    //OKボタンがクリックされたとき
+                    //選択されたファイル名を表示する
+                    System.Diagnostics.Debug.WriteLine(sfd.FileName);
+                    csv保存(sfd.FileName);
+                }
+            }
+        }
+
+        void csv保存(string path)
+        {
+            //string wave_data = "";
+            int loop = int.Parse(textBoxloop.Text);
+            progressBar1.Maximum = loop;
+            double sample_sec = 時間DATA[時間DATA.Count - 1];
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+            for (int n = 0; n < loop; n++)
+            {
+                for (int i = 0; i < 時間DATA.Count; i++)
+                {
+                    if (radioButton8bit.Checked)
+                    {
+                        sb.Append((時間DATA[i] + sample_sec * n).ToString());
+                        sb.Append(",");
+                        sb.Append(数値DATA8bit[i].ToString());
+                        sb.Append("\n");
+                    }
+                    else
+                    {
+                        sb.Append((時間DATA[i] + sample_sec * n).ToString());
+                        sb.Append(",");
+                        sb.Append(数値DATA16bit[i].ToString());
+                        sb.Append("\n");
+                    }
+                }
+                progressBar1.Value = n+1;
+            }
+            using (StreamWriter w = new StreamWriter(path))
+            {
+                w.Write(sb.ToString());
+                w.Dispose();
+
+                labeldebug.Text += "保存完了" + "\n";
+            }
         }
     }
 }
